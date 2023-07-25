@@ -1,2 +1,2 @@
 # chocolate-clash-go-api
-chocolateclash.com api for go
+chocolateclash.com api in go
