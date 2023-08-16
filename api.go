@@ -66,8 +66,10 @@ func (api *API) FixWarPid(tag string, actions_count int, war_attacks_count int) 
 			warPidUrl := a.Attr("href")
 			warPidUrl = fmt.Sprintf("%s/%s", api.BaseUrl, warPidUrl)
 
-			log.Printf("Visiting fix url: %s", warPidUrl)
-			c.Visit(warPidUrl)
+			if strings.Contains(warPidUrl, "fixwarpidissue") {
+				log.Printf("Visiting fix url: %s", warPidUrl)
+				c.Visit(warPidUrl)
+			}
 		})
 	})
 
